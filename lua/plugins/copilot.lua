@@ -1,6 +1,8 @@
 return {
-	"zbirenbaum/copilot-cmp",
+	"zbirenbaum/copilot.lua",
 	config = function()
-		require("copilot_cmp").setup()
+		require("copilot").setup({
+			-- Ajoutez ici toute configuration spécifique pour copilot.lua, si nécessaire
+		})
 	end,
 }

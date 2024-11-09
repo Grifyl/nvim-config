@@ -16,8 +16,18 @@ return {
 		"rafamadriz/friendly-snippets", -- collection de snippets pratiques
 		"hrsh7th/cmp-emoji", -- complétion d'émojis à la saisie de :
 		"onsails/lspkind.nvim", -- vs-code pictogrammes
-		"zbirenbaum/copilot.lua", -- Copilot
-		"zbirenbaum/copilote-cmp", -- Copilot
+		{
+			"zbirenbaum/copilot.lua",
+			config = function()
+				require("copilot").setup() -- Assurez-vous que copilot est configuré ici
+			end,
+		},
+		{
+			"zbirenbaum/copilot-cmp",
+			config = function()
+				require("copilot_cmp").setup()
+			end,
+		},
 	},
 	config = function()
 		local cmp = require("cmp")
